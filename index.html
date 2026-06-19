@@ -92,6 +92,41 @@
         background-color: #00aaff;
         color: 0a0a0f;
       }
+
+      #about {
+        padding: 80px 40px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      #about h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+
+      #about h2 span {
+        color: #00aaff;
+      }
+
+      #about p {
+        color: #aaaaaa;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+
+      .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 30px;
+      }
+
+      .skill-tag {
+        border: 1px solid #00aaff;
+        color: #00aaff;
+        padding: 6px 16px;
+        font-size: 0.85rem;
+      }
    </style>
 </head>
 <body>
@@ -110,6 +145,23 @@
         <h1>Burning<span>Ice</span></h1>
         <p class="tagline">Developer | Web3 | Crypto</p>
         <a href="projects" class="btn">View My Work</a>
+      </section>
+
+      <section id="about">
+         <div class="about-container">
+             <h2>About <span>Me</span></h2>
+             <p>I'm a developer building at the intersection of Python, Web3, and Crypto. With hands-on experience in crypto community management and content creation, I bring both the technical and communication skills that web3 projects need</p>
+             <p>Currently sharpening my Python skills while expanding into Typescript and Solidarity - with a focus on building tools that matter in the decentralized space.</p>
+             <div class="skills-grid">
+                <div class="skill-tag">Python</div>
+                <div class="skill-tag">HTML & CSS</div>
+                <div class="skill-tag">Javascript</div>
+                <div class="skill-tag">Web3</div>
+                <div class="skill-tag">Git & Github</div>
+                <div class="skill-tag">Crypto</div>
+             </div>
+         </div>
+
       </section>
 
 </body>
