@@ -4,10 +4,113 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>BurningIce | Developer</title>
+   <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #0a0a0f;
+        color: #ffffff;
+        font-family: 'Courier New', monospace;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        border-bottom: 1px solid #00aaff33;
+      }
+
+      .logo {
+        color: #00aaff;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .nav-links a {
+        color: #ffffff;
+        text-decoration: none;
+        margin-left: 30px;
+        font-size: 0.9rem;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #00aaff;
+      }
+
+      .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .hero-tag {
+        color: #00aaff;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        letter-spacing: 3px;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      .hero h1 span {
+        color: #00aaff;
+      }
+
+      .tagline {
+        color: #aaaaaa;
+        font-size: 1rem;
+        letter-spacing: 4px;
+        margin-bottom: 40px;
+      }
+
+      .btn {
+        background-color: transparent;
+        border: 1px solid #00aaff;
+        color: #00aaff;
+        padding: 12px 30px;
+        text-decoration: none;
+        font-family: 'Courier New', monospace;
+        font-size: 0.9rem;
+        transition: all 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #00aaff;
+        color: 0a0a0f;
+      }
+   </style>
 </head>
 <body>
-  <h1>Hello World!</h1>
+
+      <nav>
+         <div class="logo">BurningIce</div>
+         <div class="nav-links">
+            <a href="about">About</a>
+            <a href="projects">Projects</a>
+            <a href="contacts">Contact</a>
+         </div>
+      </nav>
+
+      <section class="hero">
+        <p class="hero-tag">// WELCOME TO MY PORTFOLIO</p>
+        <h1>Burning<span>Ice</span></h1>
+        <p class="tagline">Developer | Web3 | Crypto</p>
+        <a href="projects" class="btn">View My Work</a>
+      </section>
+
 </body>
-
-
 </html>
