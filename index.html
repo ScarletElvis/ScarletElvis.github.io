@@ -127,6 +127,65 @@
         padding: 6px 16px;
         font-size: 0.85rem;
       }
+
+      #projects {
+        padding: 80px 40px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      #projects h2 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+      }
+
+      #projects h2 span {
+        color: #00aaff;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+      }
+
+      .project-card {
+        border: 1px solid #00aaff33;
+        padding: 25px;
+        transition: border-color 0.3s;
+      }
+
+      .project-card:hover {
+        border-color: #00aaff;
+      }
+
+      .project-card h3 {
+        color: #00aaff;
+        margin-bottom: 15px;
+      }
+
+      .project-card p {
+        color: #aaaaaa;
+        font-size: 0.9rem;
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
+
+      .project-tags {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+      }
+
+      .projects-tags span {
+        background-color: #00aaff22;
+        color: #00aaff;
+        padding: 3px 10px;
+        font-size: 0.8rem;
+      }
+      
+      
    </style>
 </head>
 <body>
@@ -161,6 +220,45 @@
                 <div class="skill-tag">Crypto</div>
              </div>
          </div>
+
+      </section>
+
+      <section id="projects">
+            <div class="projects-container">
+              <h2>My <span>Projects</span></h2>
+              <div class="projects-grid">
+                <div class="project-card">
+                  <h3>Crypto Price Tracker</h3>
+                  <p>A Python CLI tool that fetches live cryptocurrency prices using the CoinGecko API. Supports multiple coins and displays real time data.</p>
+                  <div class="project-tags">
+                    <span>Python</span>
+                    <span>API</span>
+                    <span>Crypto</span>
+                  </div>
+                  <a href="https://github.com/ScarletElvis/crypto-tracker" class="btn">View Code</a>
+                </div>
+                <div class="project-card">
+                  <h3>Password Generator</h3>
+                  <p>A Python CLI tool that generates secure password with a custom length and character options including symbols, number and letters.</p>
+                  <div class="project-tags">
+                    <span>Python</span>
+                    <span>Security</span>
+                    <span>CLI</span> 
+                  </div>
+                  <a href="https://github.com/ScarletElvis/password-generator" class="btn">View Code</a>
+                </div>
+                <div class="project-card">
+                  <h3>Budget App</h3>
+                  <p>A Python CLI budget tracker that helps users manage income and expenses, track spending categories, and monitor their financial balance.</p>
+                  <div class="project-tags">
+                    <span>Python</span>
+                    <span>Finance</span>
+                    <span>CLI</span>
+                  </div>
+                  <a href="https://github.com/ScarletElvis/budget-app" class="btn">View code</a>
+                </div>
+              </div>
+            </div>
 
       </section>
 
