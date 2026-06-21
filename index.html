@@ -1,286 +1,36 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>BurningIce | Developer</title>
-   <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        background-color: #0a0a0f;
-        color: #ffffff;
-        font-family: 'Courier New', monospace;
-      }
-
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 40px;
-        border-bottom: 1px solid #00aaff33;
-      }
-
-      .logo {
-        color: #00aaff;
-        font-size: 1.5rem;
-        font-weight: bold;
-      }
-
-      .nav-links a {
-        color: #ffffff;
-        text-decoration: none;
-        margin-left: 30px;
-        font-size: 0.9rem;
-        transition: color 0.3s;
-      }
-
-      .nav-links a:hover {
-        color: #00aaff;
-      }
-
-      .hero {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 90vh;
-        text-align: center;
-        padding: 20px;
-      }
-
-      .hero-tag {
-        color: #00aaff;
-        font-size: 0.9rem;
-        margin-bottom: 15px;
-        letter-spacing: 3px;
-      }
-
-      .hero h1 {
-        font-size: 4rem;
-        font-weight: bold;
-        margin-bottom: 15px;
-      }
-
-      .hero h1 span {
-        color: #00aaff;
-      }
-
-      .tagline {
-        color: #aaaaaa;
-        font-size: 1rem;
-        letter-spacing: 4px;
-        margin-bottom: 40px;
-      }
-
-      .btn {
-        background-color: transparent;
-        border: 1px solid #00aaff;
-        color: #00aaff;
-        padding: 12px 30px;
-        text-decoration: none;
-        font-family: 'Courier New', monospace;
-        font-size: 0.9rem;
-        transition: all 0.3s;
-      }
-
-      .btn:hover {
-        background-color: #00aaff;
-        color: 0a0a0f;
-      }
-
-      #about {
-        padding: 80px 40px;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      #about h2 {
-        font-size: 2rem;
-        margin-bottom: 30px;
-      }
-
-      #about h2 span {
-        color: #00aaff;
-      }
-
-      #about p {
-        color: #aaaaaa;
-        line-height: 1.8;
-        margin-bottom: 20px;
-      }
-
-      .skills-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 30px;
-      }
-
-      .skill-tag {
-        border: 1px solid #00aaff;
-        color: #00aaff;
-        padding: 6px 16px;
-        font-size: 0.85rem;
-      }
-
-      #projects {
-        padding: 80px 40px;
-        max-width: 1100px;
-        margin: 0 auto;
-      }
-
-      #projects h2 {
-        font-size: 2rem;
-        margin-bottom: 40px;
-      }
-
-      #projects h2 span {
-        color: #00aaff;
-      }
-
-      .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-      }
-
-      .project-card {
-        border: 1px solid #00aaff33;
-        padding: 25px;
-        transition: border-color 0.3s;
-      }
-
-      .project-card:hover {
-        border-color: #00aaff;
-      }
-
-      .project-card h3 {
-        color: #00aaff;
-        margin-bottom: 15px;
-      }
-
-      .project-card p {
-        color: #aaaaaa;
-        font-size: 0.9rem;
-        line-height: 1.7;
-        margin-bottom: 20px;
-      }
-
-      .project-tags {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-        margin-bottom: 20px;
-      }
-
-      .projects-tags span {
-        background-color: #00aaff22;
-        color: #00aaff;
-        padding: 3px 10px;
-        font-size: 0.8rem;
-      }
-      
-      @media (max-width: 768px) {
-        .hero h1 {
-          font-size: 2.5rem;
-       }
-
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
-
-      .nav-links {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 15px;
-      }
-
-      nav.links a {
-        margin-left: 0;
-      
-      }
-    }
-
-    .burn-tag {
-      color: #00aaff;
-      font-size: 0.9rem;
-      letter-spacing: 3px;
-      margin-bottom: 20px;
-    }
-
-    #contact {
-      padding: 80px 40px;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    #contact h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    #contact h2 span {
-      color: #00aaff;
-    }
-
-    #contact p {
-      color: #aaaaaa;
-      margin-bottom: 40px;
-      line-height: 1.8;
-    }
-
-    .contact-links {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #444;
-      font-size: 0.8rem;
-      border-top: 1px solid #00aaff22;
-    }
-
-    
-
-   </style>
+   <meta name="description" content="Elvis Opara (BurningIce) - Developer building in Python, Web3, and Crypto.">
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
       <nav>
          <div class="logo">Elvis Opara</div>
          <div class="nav-links">
-            <a href="about">About</a>
-            <a href="projects">Projects</a>
-            <a href="contacts">Contact</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
          </div>
       </nav>
 
-      <section class="hero">
+      <section id="hero" class="hero">
         <p class="hero-tag">// WELCOME TO MY PORTFOLIO</p>
         <h1>Elvis <span>Opara</span></h1>
         <p class="burn-tag">// BurningIce</p>
         <p class="tagline">Developer | Web3 | Crypto</p>
-        <a href="projects" class="btn">View My Work</a>
+        <a href="#projects" class="btn">View My Work</a>
       </section>
 
       <section id="about">
          <div class="about-container">
              <h2>About <span>Me</span></h2>
              <p>I'm a developer building at the intersection of Python, Web3, and Crypto. With hands-on experience in crypto community management and content creation, I bring both the technical and communication skills that web3 projects need</p>
-             <p>Currently sharpening my Python skills while expanding into Typescript and Solidarity - with a focus on building tools that matter in the decentralized space.</p>
+             <p>Currently sharpening my Python skills while expanding into Typescript and Solidity - with a focus on building tools that matter in the decentralized space.</p>
              <div class="skills-grid">
                 <div class="skill-tag">Python</div>
                 <div class="skill-tag">HTML & CSS</div>
@@ -325,7 +75,7 @@
                     <span>Finance</span>
                     <span>CLI</span>
                   </div>
-                  <a href="https://github.com/ScarletElvis/budget-app" class="btn">View code</a>
+                  <a href="https://github.com/ScarletElvis/budget-app" class="btn">View Code</a>
                 </div>
               </div>
             </div>
@@ -340,7 +90,7 @@
                   <a href="https://github.com/ScarletElvis" class="btn" target="_blank">Github</a>
                   <a href="https://x.com/BurningIce72" class="btn" target="_blank">X / Twitter</a>
                   <a href="https://www.linkedin.com/in/elvis-chimaobi-opara-a85ba727b" class="btn" target="_blank">LinkedIn</a>
-                  <a href="mailto:elvischimaobi11@gmail.com" class="btn" target="_blank">Email Me</a>
+                  <a href="mailto:elvischimaobi11@gmail.com" class="btn">Email Me</a>
 
              </div>
            </div>
