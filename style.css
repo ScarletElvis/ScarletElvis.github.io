@@ -227,6 +227,10 @@ footer {
  border-top: 1px solid #00aaff22;
 }
 
+.hamburger {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.5rem;
@@ -236,20 +240,38 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hamburger {
+  display: block;
+  background: none;
+  border: none;
+  color: #00aaff;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
    .nav-links {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: none;
+  flex-direction: column;
+  width: 100%;
   gap: 15px;
+  padding: 20px 0;
 }
 
-   .nav-links a {
-  margin-left: 0;
+   .nav-links.open {
+  display: flex;
 
 }
+
+.btn {
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
 }
+}
+
 
 
 
