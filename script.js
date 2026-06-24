@@ -25,7 +25,7 @@ sections.forEach(function (section) {observer.observe(section);});
 const backToTop = document.getElementById("backToTop");
 
 window.addEventListener("scroll", function () {
-  if (this.window.scrolly > 300) {
+  if (window.scrollY > 300) {
     backToTop.style.display = "block"; 
   } else {backToTop.style.display = "none"; 
 }
@@ -33,5 +33,5 @@ window.addEventListener("scroll", function () {
 
 
 backToTop.addEventListener("click", function () {
-  widndow.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
