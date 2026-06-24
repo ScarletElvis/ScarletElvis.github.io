@@ -6,3 +6,18 @@ hamburger.addEventListener("click", function () {navLinks.classList.toggle("open
 navLinks.querySelectorAll("a").forEach(function (link) {link.addEventListener("click", function () {navLinks.classList.remove("open");
 });
 });
+
+const sections = document.querySelectorAll("section");
+const navItems = document.querySelectorAll(".nav-links a");
+
+const observer = new IntersectionObserver(function (entries) {entries.forEach(function (entry) {if (entry.isIntersecting) {navItems.forEach(function (link) {link.classList.remove("active");});
+    const id = entry.target.id;
+    const activeLink =document.querySelector(`.nav-links a[href="#${id}"]`);
+    if (activeLink) {
+      activeLink.classList.add("active");
+    }
+  } 
+  });
+}, { threshold: 0.5 });
+
+sections.forEach(function (section) {observer.observe(section);});

@@ -40,6 +40,11 @@ nav {
   color: #00aaff;
 }
 
+.nav-links a.active {
+  color: #00aaff;
+  border-bottom: 1px solid #00aaff;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
