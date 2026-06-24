@@ -20,6 +20,9 @@ nav {
   align-items: center;
   padding: 20px 40px;
   border-bottom: 1px solid #00aaff33;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
