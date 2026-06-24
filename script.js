@@ -35,3 +35,18 @@ window.addEventListener("scroll", function () {
 backToTop.addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+
+const fadeElements = document.querySelectorAll(".fade-in");
+
+
+const fadeObserver = new IntersectionObserver(function (entries) 
+{entries.forEach(function (entry)
+  {if (entry.intersecting) {
+    entry.target.classList.add("visible");
+  }
+}); }, {threshold: 0.1});
+
+fadeElements.forEach(function (el) {
+  fadeObserver.obeserve(el);
+});
