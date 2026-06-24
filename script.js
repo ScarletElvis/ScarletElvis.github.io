@@ -41,12 +41,12 @@ const fadeElements = document.querySelectorAll(".fade-in");
 
 
 const fadeObserver = new IntersectionObserver(function (entries) 
-{entries.forEach(function (entry)
-  {if (entry.intersecting) {
+{entries.forEach(function (entry) {
+  if (entry.isIntersecting) {
     entry.target.classList.add("visible");
   }
 }); }, {threshold: 0});
 
 fadeElements.forEach(function (el) {
-  fadeObserver.obeserve(el);
+  fadeObserver.observe(el);
 });
