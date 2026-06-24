@@ -45,7 +45,7 @@ const fadeObserver = new IntersectionObserver(function (entries)
   {if (entry.intersecting) {
     entry.target.classList.add("visible");
   }
-}); }, {threshold: 0.1});
+}); }, {threshold: 0});
 
 fadeElements.forEach(function (el) {
   fadeObserver.obeserve(el);
