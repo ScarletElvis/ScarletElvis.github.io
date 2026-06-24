@@ -288,6 +288,12 @@ footer {
   padding: 20px 0;
 }
 
+  @media (max-width: 768px) {
+     nav {
+      position: relative;
+}
+}
+
    .nav-links.open {
   display: flex;
 
