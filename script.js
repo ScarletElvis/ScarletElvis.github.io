@@ -21,3 +21,17 @@ const observer = new IntersectionObserver(function (entries) {entries.forEach(fu
 }, { threshold: 0.5 });
 
 sections.forEach(function (section) {observer.observe(section);});
+
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", function () {
+  if (this.window.scrolly > 300) {
+    backToTop.style.display = "block"; 
+  } else {backToTop.style.display = "none"; 
+}
+});
+
+
+backToTop.addEventListener("click", function () {
+  widndow.scrollTo({ top: 0, behavior: "smooth" });
+});
