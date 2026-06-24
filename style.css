@@ -23,6 +23,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
+  background-color: #0a0a0f;
 }
 
 .logo {
@@ -280,6 +281,7 @@ footer {
   align-items: flex-start;
   gap: 10px;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .hamburger {
@@ -299,11 +301,7 @@ footer {
   padding: 20px 0;
 }
 
-  @media (max-width: 768px) {
-     nav {
-      position: relative;
-}
-}
+
 
    .nav-links.open {
   display: flex;
